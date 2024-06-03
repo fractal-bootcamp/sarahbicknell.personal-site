@@ -10,7 +10,7 @@ export const meta: MetaFunction = () => {
 const Header = () => {
   return (
     <header> 
-      <h1> Disco's Site </h1>
+      <h1> Disco's Site v2</h1>
       <ul>
         <li> <a href="about">About</a> </li>
       </ul>
