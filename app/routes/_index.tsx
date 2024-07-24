@@ -9,7 +9,7 @@ export const meta: MetaFunction = () => {
 };
 
 export default function Index() {
-  const [showProjects, setShowProjects] = useState(false)
+  const [currentDropdown, setCurrentDropdown] = useState<null | string> (null)
 
     return (
       <div>
@@ -21,26 +21,59 @@ export default function Index() {
             <div className="ml-3 pl-10 pt-10">  
               <h1 className="font-mono font-bold text-5xl pb-5 text-shadow shadow-red-200  text-pink-700"> disco </h1>
               <div className="list-disc flex sm:flex-col lg:flex-row font-mono text-shadow shadow-red-200 text-white text-xl pb-5"> 
-                  <div className="pr-10 hover:text-[#f5c4df]"> <a href="./about">about.</a> </div>
-                  <div className="pr-10 hover:text-[#f5c4df]"> <a href="./contact"> contact. </a> </div> 
-                  <div onClick={()=> setShowProjects(!showProjects)} className="pr-10 hover:text-[#f5c4df] cursor-pointer"> projects.</div>
+                  <div className="pr-10 hover:text-[#f5c4df] cursor-pointer" onClick={()=> setCurrentDropdown(currentDropdown === "about" ? null : "about")} > about. </div>
+                  <div className="pr-10 hover:text-[#f5c4df] cursor-pointer" onClick={()=> setCurrentDropdown(currentDropdown === "projects" ? null : "projects")} > projects.</div>
+                  <div className="pr-10 hover:text-[#f5c4df]"> <a href="mailto:sarahebicknell@gmail.com"> email. </a> </div> 
+                  <div className="pr-10 hover:text-[#f5c4df]" onClick={()=> setCurrentDropdown(currentDropdown === "coolstuff" ? null : "coolstuff")}> cool stuff. </div> 
               </div>
               <AnimatePresence> 
-                { showProjects && (
+                { currentDropdown === "about" && (
                 <motion.div
                 initial={{ opacity: 0, height: 0 }}
                 animate={{ opacity: 1, height: 'auto' }}
                 exit={{ opacity: 0, height: 0 }}
                 transition={{ duration: 0.3 }}
                 className="list-disc flex flex-col font-mono text-shadow shadow-red-200 text-white text-lg"> 
-                  <div className="pr-10 hover:text-[#f5c4df]"> <a href="https://pink-tank-toe.netlify.app"> tic tac toe</a></div>
-                  <div className="pr-10 hover:text-[#f5c4df]"> <a href="https://disco-algo-viz.netlify.app"> algorithm vizualizations</a></div>
-                  <div className="pr-10 hover:text-[#f5c4df]"> <a href="https://psychoanalyze-dev.vercel.app/"> psychoanalyze dev</a></div>
+                  <div>hi I'm disco currently studying software dev at <a 
+                    href="fractalbootcamp.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline hover:text-[#f5c4df]"
+                    >fractal tech</a> </div>
+                </motion.div> )}
+              </AnimatePresence>
+              <AnimatePresence> 
+                { currentDropdown === "projects" && (
+                <motion.div
+                initial={{ opacity: 0, height: 0 }}
+                animate={{ opacity: 1, height: 'auto' }}
+                exit={{ opacity: 0, height: 0 }}
+                transition={{ duration: 0.3 }}
+                className="list-disc flex flex-col font-mono text-shadow shadow-red-200 text-white text-lg"> 
+                  <div className="pb-2 underline hover:text-[#f5c4df]"> <a href="https://pink-tank-toe.netlify.app"> tic tac toe</a></div>
+                  <div className="pb-2 underline hover:text-[#f5c4df]"> <a href="https://disco-algo-viz.netlify.app"> algorithm vizualizations</a></div>
+                  <div className="pb-2 underline hover:text-[#f5c4df]"> <a href="https://psychoanalyze-dev.vercel.app/"> psychoanalyze dev</a></div>
+                </motion.div> )}
+              </AnimatePresence>
+              <AnimatePresence> 
+                { currentDropdown === "coolstuff" && (
+                <motion.div
+                initial={{ opacity: 0, height: 0 }}
+                animate={{ opacity: 1, height: 'auto' }}
+                exit={{ opacity: 0, height: 0 }}
+                transition={{ duration: 0.3 }}
+                className="list-disc flex flex-col font-mono text-shadow shadow-red-200 text-white text-lg"> 
+                  <div className="pr-10 underline hover:text-[#f5c4df]"> <a href="http://listen.hatnote.com/"> listen to wikipedia </a></div>
                 </motion.div> )}
               </AnimatePresence>
               <div className=" text-white font-mono pt-5 text-lg"> 
-                  <p className="hover:text-[#f5c4df]"><a href="https://x.com/hyperdiscogirl" > X </a></p>
-                  <p className="hover:text-[#f5c4df]"><a href="https://github.com/sarahbicknell"> GitHub</a></p>
+              <div className="relative inline-block group">
+                <p className="hover:text-[#f5c4df] inline-block">
+                  <a href="https://x.com/hyperdiscogirl">X</a>
+                </p>
+                <span className="absolute left-full ml-2 top-1/2 transform -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity delay-300 duration-1000 text-[#f5c4df]"> (Twitter) </span>
+              </div>
+              <p className="hover:text-[#f5c4df]"><a href="https://github.com/sarahbicknell"> GitHub</a></p>
               </div> 
             </div>
           </div>
