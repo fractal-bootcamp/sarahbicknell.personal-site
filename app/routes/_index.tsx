@@ -5,7 +5,6 @@ import { useState } from "react";
 export const meta: MetaFunction = () => {
   return [
     { title: "disco" },
-    { name: "description", content: "Welcome to Remix!" },
   ];
 };
 
@@ -33,8 +32,8 @@ export default function Index() {
                 animate={{ opacity: 1, height: 'auto' }}
                 exit={{ opacity: 0, height: 0 }}
                 transition={{ duration: 0.3 }}
-                className="list-disc flex sm:flex-col lg:flex-row font-mono text-shadow shadow-red-200 text-white text-lg"> 
-                  <div className="pr-10 hover:text-[#f5c4df]"> <a href="https://pink-tank-toe.netlify.app"> tictactoe</a></div>
+                className="list-disc flex flex-col font-mono text-shadow shadow-red-200 text-white text-lg"> 
+                  <div className="pr-10 hover:text-[#f5c4df]"> <a href="https://pink-tank-toe.netlify.app"> tic tac toe</a></div>
                   <div className="pr-10 hover:text-[#f5c4df]"> <a href="https://disco-algo-viz.netlify.app"> algorithm vizualizations</a></div>
                   <div className="pr-10 hover:text-[#f5c4df]"> <a href="https://psychoanalyze-dev.vercel.app/"> psychoanalyze dev</a></div>
                 </motion.div> )}
