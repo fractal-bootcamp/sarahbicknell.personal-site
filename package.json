@@ -13,6 +13,7 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
+    "@fullstory/browser": "^2.0.5",
     "@netlify/functions": "^2.7.0",
     "@netlify/remix-adapter": "^2.4.0",
     "@radix-ui/react-slot": "^1.0.2",
@@ -27,6 +28,7 @@
     "lucide-react": "^0.383.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-fullstory": "^1.4.0",
     "tailwind-merge": "^2.3.0",
     "tailwindcss-animate": "^1.0.7",
     "terminal.css": "^0.7.5"
