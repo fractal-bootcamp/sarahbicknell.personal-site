@@ -6,6 +6,8 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 
+import FullStory from "react-fullstory";
+
 import type { LinksFunction } from "@remix-run/node";
 import stylesheet from "~/tailwind.css?url";
 
@@ -23,6 +25,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body className="overflow-x-hidden">
+        <FullStory org='o-208DSG-na1' />
         {children}
         <ScrollRestoration />
         <Scripts />
