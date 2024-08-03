@@ -6,6 +6,8 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 
+import { useEffect, useState } from "react";
+
 import FullStory from "react-fullstory";
 
 import type { LinksFunction } from "@remix-run/node";
@@ -16,6 +18,12 @@ export const links: LinksFunction = () => [
 ];
 
 export function Layout({ children }: { children: React.ReactNode }) {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
   return (
     <html lang="en">
       <head>
@@ -25,7 +33,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body className="overflow-x-hidden">
-        <FullStory org='o-208DSG-na1' />
+        {isClient && <FullStory org="o-208DSG-na1" /> }
         {children}
         <ScrollRestoration />
         <Scripts />
