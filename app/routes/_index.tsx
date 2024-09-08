@@ -37,12 +37,12 @@ export default function Index() {
                     transition={{ duration: 0.3 }}
                     className="list-disc flex flex-col font-mono text-shadow shadow-red-200 text-white text-lg xl:text-xl 2xl:text-2xl"
                   > 
-                    <div>hi I'm disco currently studying software dev at <a 
-                      href="fractalbootcamp.com"
+                    <div>hi I'm disco, a baby dev accelerating my skills at  <a 
+                      href="https://fractalbootcamp.com"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="underline hover:text-[#f5c4df]"
-                    >fractal tech</a> </div>
+                    >fractal tech</a>. pitch me on cool projects that help humans solve coordination problems. or ask me to make your website pink. or better yet, hire me!  </div>
                   </motion.div>
                 )}
                 {currentDropdown === "projects" && (
@@ -55,12 +55,14 @@ export default function Index() {
                     className="list-disc flex flex-col font-mono text-shadow shadow-red-200 text-white text-lg xl:text-xl 2xl:text-2xl"
                   > 
                     <div className="text-xl ">  personal  </div>
-                    <div className="pb-2 underline hover:text-[#f5c4df]"> <a href="https://psychoanalyze-dev.vercel.app/"> psychoanalyze dev</a></div>
                     <div className="pb-2 underline hover:text-[#f5c4df]"> <a href="https://wikiinfinitia.vercel.app/"> infinite wikipedia</a></div>
-                    <div className="pb-2 underline hover:text-[#f5c4df]"> <a href="https://disco-algo-viz.netlify.app"> algorithm vizualizations</a></div>
+                    <div className="pb-2 underline hover:text-[#f5c4df]"> <a href="https://psychoanalyze-dev.vercel.app/"> psychoanalyze dev</a></div>
+                    <div className="pb-2 underline hover:text-[#f5c4df]"> <a href="https://letsgohome-delta.vercel.app/"> let's go home!</a></div>
                     <div className="pb-2 underline hover:text-[#f5c4df]"> <a href="https://pink-tank-toe.netlify.app"> tic tac toe</a></div>
-                    <div className="text-xl mt-2"> group </div>
+                    <div className="text-xl mt-2"> group capstones </div>
                     <div className="pb-2 underline hover:text-[#f5c4df]"> <a href="https://wemadeabudget.vercel.app"> we made a budget</a></div>
+                    <div className="pb-2 underline hover:text-[#f5c4df]"> <a href="https://fractalmarketplace.netlify.app"> fractal marketplace</a></div>
+
                   </motion.div>
                 )}
                 {currentDropdown === "email" && (
