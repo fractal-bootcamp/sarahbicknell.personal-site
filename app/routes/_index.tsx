@@ -87,6 +87,8 @@ export default function Index() {
                   > 
                     <div className="pr-10 underline hover:text-[#f5c4df]"> <a href="http://listen.hatnote.com/"> listen to wikipedia </a></div>
                     <div className="pr-10 underline hover:text-[#f5c4df]"> <a href="https://iyanaai.netlify.app/"> free iyana </a></div>
+                    <div className="pr-10 underline hover:text-[#f5c4df]"> <a href="https://dynamicland.org/"> dynamicland </a></div>
+
                   </motion.div>
                 )}
               </AnimatePresence>
