@@ -42,7 +42,7 @@ export default function Index() {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="underline hover:text-[#f5c4df]"
-                    >fractal tech</a>. i've built fullstack projects using react and typescript. pitch me on cool projects that help humans solve coordination problems. or ask me to make your website pink. or better yet, hire me!  </div>
+                    >fractal tech</a>. i've built fullstack projects using react and typescript. pitch me on cool projects that help humans solve coordination problems (see <a href="https://letsgohome-delta.vercel.app/" className="underline hover:text-[#f5c4df]">here</a> for perhaps the simplest possible example). or ask me to make your website pink. or better yet, hire me!  </div>
                   </motion.div>
                 )}
                 {currentDropdown === "projects" && (
