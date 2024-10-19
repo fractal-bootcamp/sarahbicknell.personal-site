@@ -35,9 +35,9 @@ export default function Index() {
                     animate={{ opacity: 1, height: 'auto' }}
                     exit={{ opacity: 0, height: 0 }}
                     transition={{ duration: 0.3 }}
-                    className="list-disc flex flex-col font-mono text-shadow shadow-red-200 text-white text-lg xl:text-xl 2xl:text-2xl"
+                    className="list-disc flex flex-col font-mono text-shadow shadow-red-200 text-white text-sm sm:text-base md:text-lg xl:text-xl 2xl:text-2xl"
                   > 
-                    <div>hi I'm disco, a junior software dev accelerating my skills at  <a 
+                    <div className="text-sm sm:text-base md:text-lg xl:text-xl 2xl:text-2xl">hi I'm disco, a junior software dev accelerating my skills at  <a 
                       href="https://fractalbootcamp.com"
                       target="_blank"
                       rel="noopener noreferrer"
