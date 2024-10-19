@@ -12,9 +12,9 @@ export default function Index() {
   const [currentDropdown, setCurrentDropdown] = useState<null | string>(null);
 
   return (
-    <div>
-      <div className="relative min-h-screen max-w-full overflow-x-hidden bg-[radial-gradient(circle_at_50%_65%,rgba(218,29,107,0.83)_0%,rgba(20,10,10,0.9)_100%)]">
-        <div className="absolute inset-0 bg-screen-lines lg:pl-20 pt-10 lg:pt-20 flex flex-col lg:flex-row">
+    <div className="min-h-screen bg-[radial-gradient(circle_at_50%_65%,rgba(218,29,107,0.83)_0%,rgba(20,10,10,0.9)_100%)] flex flex-col">
+      <div className="flex-grow overflow-y-auto">
+        <div className="bg-screen-lines lg:pl-20 pt-10 lg:pt-20 flex flex-col lg:flex-row">
           <div className="flex-shrink-0 flex justify-center p-4">
             <img src="/disco.jpg" alt="Disco" className="rounded-full w-[150px] lg:h-[300px] lg:w-[300px] xl:w-[400px] xl:h-[400px] 2xl:w-[500px] 2xl:h-[500px] shadow-[0_0_10px_rgba(255,255,255,3)] lg:border "/> 
           </div>
